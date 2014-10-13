@@ -56,6 +56,18 @@ specific language governing permissions and limitations under the License.
 				<th>Renderer:</th>
 				<td><%= report.renderer %></td>
 			</tr>
+            <% if (report.unMaskedVendor !== '') { %>
+			<tr>
+				<th>Unmasked Vendor:</th>
+				<td><%= report.unMaskedVendor %></td>
+			</tr>
+            <% } %>
+            <% if (report.unMaskedRenderer !== '') { %>
+			<tr>
+				<th>Unmasked Renderer:</th>
+				<td><%= report.unMaskedRenderer %></td>
+			</tr>
+            <% } %>
 			<tr>
 				<th>Antialiasing:</th>
 				<td><%= report.antialias %></td>
@@ -134,6 +146,10 @@ specific language governing permissions and limitations under the License.
 						<div class="framebuffer">
 							<h1>Framebuffer</h1>
 							<table>
+								<tr>
+									<th>Max Color Buffers:</th>
+									<td><%= report.maxColorBuffers %></td>
+								</tr>
 								<tr>
 									<th>RGBA Bits:</th>
 									<td>[<%= report.redBits %>, <%= report.greenBits %>, <%= report.blueBits %>, <%= report.alphaBits %>]</td>
